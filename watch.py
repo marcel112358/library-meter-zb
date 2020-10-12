@@ -2,6 +2,7 @@ import requests
 import re
 from datetime import datetime
 import time
+from __future__ import print_function
 
 while 1:
     r = requests.get('https://www.zb.uzh.ch/themes/zb/assets/js/gauge.value.js')
