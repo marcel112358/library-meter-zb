@@ -50,7 +50,7 @@ def job():
 
 
 if __name__ == '__main__':
-    for hour in range(8, 20):
+    for hour in range(7, 21):
         for minute in range(0, 60):
             execution_time = f'{hour:02d}:{minute:02d}'
             schedule.every().monday.at(execution_time).do(job)
@@ -58,10 +58,6 @@ if __name__ == '__main__':
             schedule.every().wednesday.at(execution_time).do(job)
             schedule.every().thursday.at(execution_time).do(job)
             schedule.every().friday.at(execution_time).do(job)
-
-    for hour in range(8, 17):
-        for minute in range(0, 60):
-            execution_time = f'{hour:02d}:{minute:02d}'
             schedule.every().saturday.at(execution_time).do(job)
             schedule.every().sunday.at(execution_time).do(job)
 
